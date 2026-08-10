@@ -1,1787 +1,865 @@
-# \# ⚡ AI Dev Studio
+# ⚡ AI Dev Studio
 
-# 
+> **AI-powered browser-based development workspace and intelligent coding IDE.**
 
-# > \*\*AI-powered browser-based development workspace and intelligent coding IDE.\*\*
+AI Dev Studio is a full-stack, browser-based development environment that brings modern AI-assisted software development directly into the browser.
 
-# 
+Inspired by modern AI development platforms such as **Cursor, Windsurf, and Replit**, AI Dev Studio combines a complete IDE workspace with an integrated AI coding assistant, file explorer, code editor, virtual terminal, live preview, and Git-based source control.
 
-# \*\*AI Dev Studio\*\* is a full-stack, browser-based development environment designed to bring modern AI-assisted software development directly into the browser.
+The goal is simple: **bring coding, AI assistance, testing, previewing, and source control into one development workspace.**
 
-# 
+---
 
-# Inspired by next-generation coding platforms such as \*\*Cursor, Windsurf, and Replit\*\*, AI Dev Studio combines a complete IDE workspace with an embedded AI coding assistant, virtual terminal, live preview, file management, and Git-based source control.
+## ✨ Features
 
-# 
+### 🖥️ Browser-Based IDE
 
-# Instead of being just an AI chat application, AI Dev Studio provides a \*\*complete development workspace\*\* where developers can manage files, edit code, execute commands, preview applications, and interact with an AI coding agent from a single interface.
+AI Dev Studio provides a modern multi-panel development workspace directly in the browser.
 
-# 
+**File Explorer**
 
-# \---
+* 📁 Folder tree navigation
+* 📄 File management
+* 📂 Folder management
+* ⬆️ File uploads
+* 📤 Folder uploads
+* 🖱️ Context menus
+* 🧭 Workspace navigation
+* 💻 Directory-aware terminal access
 
-# 
+---
 
-# \# ✨ Features
+### 📝 AI-Powered Code Editor
 
-# 
+Edit and manage multiple project files from a single development workspace.
 
-# \## 🖥️ Full Browser-Based IDE
+Supported technologies include:
 
-# 
+* Python
+* JavaScript
+* TypeScript
+* HTML
+* CSS
+* Node.js
+* JSON
+* Markdown
+* Other common development formats
 
-# AI Dev Studio provides a modern three-panel development workspace directly inside the browser.
+Editor capabilities include:
 
-# 
+* Multi-file editing
+* Editor tabs
+* File switching
+* Syntax highlighting
+* Code editing
+* Save states
+* Workspace-aware editing
 
-# \### 📁 File Explorer
+---
 
-# 
+## 🤖 AI Coding Agent
 
-# Manage your project files through an integrated file explorer.
+AI Dev Studio includes an integrated AI coding assistant powered by **Groq** and the configured **Llama 3.3 70B** model.
 
-# 
+The AI assistant is designed to understand the code being worked on and provide development-focused assistance.
 
-# Features include:
+### AI Actions
 
-# 
+| Action        | Purpose                           |
+| ------------- | --------------------------------- |
+| 💡 Explain    | Understand unfamiliar code        |
+| 🔧 Fix        | Identify and fix potential issues |
+| ♻️ Refactor   | Improve code structure            |
+| 🧪 Test       | Generate or suggest tests         |
+| 🔀 Review Git | Analyze Git changes               |
+| 📚 Document   | Generate documentation            |
 
-# \* Folder tree navigation
+This allows developers to perform common development tasks without leaving the IDE.
 
-# \* Custom indentation guides
+---
 
-# \* File and folder management
+## 💻 Virtual Terminal
 
-# \* Context menus
+AI Dev Studio provides an integrated terminal experience for running development commands directly from the workspace.
 
-# \* Local file uploads
+Example commands:
 
-# \* Local folder uploads
+```bash
+npm install
+```
 
-# \* Workspace navigation
+```bash
+npm run dev
+```
 
-# \* Directory-aware terminal access
+```bash
+npm test
+```
 
-# 
+```bash
+npm run build
+```
 
-# \---
+```bash
+python main.py
+```
+
+```bash
+node server.js
+```
 
-# 
+Windows batch scripts are also supported:
 
-# \## 📝 AI-Powered Code Editor
+```text
+run.bat
+```
 
-# 
+---
 
-# Edit multiple files using a modern code editing experience.
+## 📂 Context-Aware Terminal
 
-# 
+The terminal understands the currently selected workspace directory.
+
+For example, developers can open a terminal directly from a selected folder and work within that directory without manually navigating from the project root.
+
+```bash
+cd project-folder
+```
+
+This creates a more efficient workflow between the file explorer and terminal.
+
+---
+
+## 🌐 Live Preview
+
+AI Dev Studio provides an integrated preview workflow for web applications and development projects.
+
+Developers can preview:
+
+* HTML applications
+* Frontend projects
+* Local web applications
+* Development servers
+* Running project interfaces
+
+### Development Workflow
+
+```text
+Write Code
+    ↓
+Run Application
+    ↓
+Live Preview
+    ↓
+Test
+    ↓
+Fix with AI
+    ↓
+Repeat
+```
+
+---
+
+## 🔀 Git & Source Control
+
+AI Dev Studio includes a source-control workspace designed around Git-based development.
+
+The source-control workflow can provide:
+
+* Git changes
+* Modified files
+* File diffs
+* Commit history
+* Code change inspection
+* Git review assistance
+
+The integrated AI agent can also assist with reviewing Git changes before committing.
+
+---
+
+## 🧠 AI-Assisted Development Workflow
+
+```text
+┌─────────────────────┐
+│   File Explorer     │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│    Code Editor      │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│   AI Coding Agent   │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│  Virtual Terminal   │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│    Live Preview     │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│   Source Control    │
+└─────────────────────┘
+```
+
+AI Dev Studio aims to reduce the need to switch between multiple development applications.
+
+---
+
+# 🏗️ Architecture
+
+```text
+                         ┌─────────────────────┐
+                         │       Browser       │
+                         │     AI Dev Studio   │
+                         └──────────┬──────────┘
+                                    │
+              ┌─────────────────────┼─────────────────────┐
+              ↓                     ↓                     ↓
+      ┌──────────────┐      ┌──────────────┐      ┌──────────────┐
+      │ File System  │      │ Code Editor  │      │ AI Assistant │
+      └──────────────┘      └──────────────┘      └──────┬───────┘
+                                                         │
+                                                         ↓
+                                                ┌────────────────┐
+                                                │    Groq API    │
+                                                │ Llama 3.3 70B  │
+                                                └────────────────┘
+
+              ┌─────────────────────┼─────────────────────┐
+              ↓                     ↓                     ↓
+       ┌────────────┐        ┌────────────┐        ┌────────────┐
+       │  Terminal  │        │  Preview   │        │    Git     │
+       └────────────┘        └────────────┘        └────────────┘
+```
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology              | Purpose                       |
+| ----------------------- | ----------------------------- |
+| **React**               | Frontend application          |
+| **TypeScript**          | Type-safe development         |
+| **Vite**                | Development and build tooling |
+| **Tailwind CSS**        | UI styling                    |
+| **Groq API**            | AI inference                  |
+| **Llama 3.3 70B**       | AI coding model               |
+| **Node.js**             | Runtime environment           |
+| **npm**                 | Package management            |
+| **Bun**                 | Alternative package manager   |
+| **Git**                 | Source control                |
+| **Monaco-style Editor** | Code editing experience       |
+
+---
+
+# 📂 Project Structure
 
-# Supported technologies include:
+```text
+AI-Dev-Studio/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── lib/
+│   └── main.tsx
+│
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── LICENSE
+├── README.md
+├── bunfig.toml
+├── components.json
+├── eslint.config.js
+├── package.json
+├── package-lock.json
+├── run.bat
+├── run.sh
+├── tsconfig.json
+└── vite.config.ts
+```
 
-# 
+The primary application source code is located inside the `src/` directory.
 
-# \* Python
+---
 
-# \* JavaScript
+# 💻 Requirements
 
-# \* TypeScript
+Before running AI Dev Studio, make sure you have:
 
-# \* HTML
+* Windows 10 / Windows 11, macOS, or Linux
+* Node.js 20+
+* npm
+* Internet connection
+* Groq API access for AI functionality
 
-# \* CSS
+Check your installed versions:
 
-# \* Node.js
+```bash
+node --version
+```
 
-# \* JSON
+```bash
+npm --version
+```
 
-# \* Markdown
+---
 
-# \* Other common development formats
+# 🚀 Installation
 
-# 
+## 1. Clone the Repository
 
-# The editor supports:
+```bash
+git clone https://github.com/rsamwilson2323-cloud/AI-Dev-Studio.git
+```
 
-# 
+Navigate into the project:
 
-# \* Multi-file editing
+```bash
+cd AI-Dev-Studio
+```
 
-# \* Tabs
+---
 
-# \* File switching
+## 2. Install Dependencies
 
-# \* Save states
+Using npm:
 
-# \* Syntax highlighting
+```bash
+npm install
+```
 
-# \* Code editing
+Or using Bun:
 
-# \* Workspace-aware editing
+```bash
+bun install
+```
 
-# 
+---
 
-# \---
+# ▶️ Running the Application
 
-# 
+## Windows — Recommended
 
-# \# 🤖 AI Coding Agent
+AI Dev Studio includes a Windows launcher:
 
-# 
+```text
+run.bat
+```
 
-# AI Dev Studio includes an integrated AI coding assistant powered by:
+Double-click `run.bat` to start the application.
 
-# 
+The launcher is designed to:
 
-# ```text
+1. Check whether Node.js is installed
+2. Display the Node.js version
+3. Check project dependencies
+4. Install missing dependencies
+5. Start the development server
+6. Launch the application
+7. Run the application on port `8080`
 
-# llama-3.3-70b-versatile
+---
 
-# ```
+## Manual Start
 
-# 
+Start the development server manually:
 
-# through the \*\*Groq API\*\*.
+```bash
+npm run dev -- --port 8080
+```
 
-# 
+Open:
 
-# The AI assistant is designed to understand the code currently being worked on and provide development-focused assistance.
+```text
+http://localhost:8080
+```
 
-# 
+or:
 
-# \### AI Actions
+```text
+http://127.0.0.1:8080
+```
 
-# 
+---
 
-# The coding agent provides dedicated actions for:
+# ⚙️ Groq AI Configuration
 
-# 
+AI Dev Studio uses the **Groq API** to power its AI coding assistant.
 
-# \* 💡 Explain
+Configured model:
 
-# \* 🔧 Fix
+```text
+llama-3.3-70b-versatile
+```
 
-# \* ♻️ Refactor
+The AI assistant provides actions including:
 
-# \* 🧪 Test
+```text
+Explain
+Fix
+Refactor
+Test
+Review Git
+Document
+```
 
-# \* 🔀 Review Git
+## 🔐 API Key Security
 
-# \* 📚 Document
+**Never commit your personal Groq API key to GitHub.**
 
-# 
+If your project uses environment variables, keep your environment files excluded from Git.
 
-# Instead of manually describing every development task, developers can select the required AI action and work directly with their code.
+Example:
 
-# 
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
 
-# \---
+Replace the placeholder with your own API key.
 
-# 
+> ⚠️ Never expose private API credentials in publicly accessible frontend source code.
 
-# \# 💻 Virtual Terminal
+---
 
-# 
+# 🧭 Application Modules
 
-# AI Dev Studio includes an integrated terminal experience for executing development commands inside the workspace.
+## 🗂️ File Explorer
 
-# 
+The File Explorer provides a structured view of the current workspace.
 
-# Examples include:
+Users can:
 
-# 
+* Browse folders
+* Open files
+* Upload files
+* Upload folders
+* Navigate project structures
+* Use folder context menus
+* Open terminals in selected locations
 
-# ```bash
+---
 
-# npm install
+## 📝 Code Editor
 
-# ```
+The editor provides a multi-file coding environment.
 
-# 
+Typical workflow:
 
-# ```bash
+```text
+Open File
+    ↓
+Edit Code
+    ↓
+Save
+    ↓
+Ask AI
+    ↓
+Test
+    ↓
+Preview
+```
 
-# npm run dev
+---
 
-# ```
+## 🤖 AI Assistant
 
-# 
+### Explain
 
-# ```bash
+Understand unfamiliar code.
 
-# npm test
+```text
+Explain this function.
+```
 
-# ```
+### Fix
 
-# 
+Identify and correct potential issues.
 
-# ```bash
+```text
+Fix the errors in this file.
+```
 
-# python main.py
+### Refactor
 
-# ```
+Improve code structure and maintainability.
 
-# 
+```text
+Refactor this component.
+```
 
-# ```bash
+### Test
 
-# node server.js
+Generate or suggest tests.
 
-# ```
+```text
+Create tests for this function.
+```
 
-# 
+### Review Git
 
-# ```bash
+Analyze current Git changes.
 
-# run.bat
+```text
+Review my current Git changes.
+```
 
-# ```
+### Document
 
-# 
+Generate useful technical documentation.
 
-# The terminal is designed to make common development workflows accessible without leaving the browser.
+```text
+Document this function.
+```
 
-# 
+---
 
-# \---
+# 💻 Terminal
 
-# 
+The integrated terminal supports common development commands:
 
-# \# 📂 Context-Aware Terminal
+```bash
+npm install
+npm run dev
+npm run build
+npm test
+python app.py
+node server.js
+```
 
-# 
+Windows batch scripts can also be executed:
 
-# The terminal automatically understands the selected workspace directory.
+```text
+run.bat
+```
 
-# 
+---
 
-# For example, right-clicking a folder in the File Explorer can open the terminal directly inside that directory.
+# 🌐 Local Network Access
 
-# 
+The development server can be exposed to devices connected to the same local network.
 
-# This allows developers to work with commands such as:
+Run:
 
-# 
+```bash
+npm run dev -- --host 0.0.0.0 --port 8080
+```
 
-# ```bash
+Then access the application using your computer's local IP:
 
-# cd project-folder
+```text
+http://YOUR_LOCAL_IP:8080
+```
 
-# ```
+Example:
 
-# 
+```text
+http://192.168.1.10:8080
+```
 
-# without manually navigating through directories.
+If another device cannot connect, make sure your operating system firewall allows port `8080`.
 
-# 
+---
 
-# \---
+# 🧪 Development
 
-# 
+Start the development server:
 
-# \# 🌐 Live Preview
+```bash
+npm run dev
+```
 
-# 
+Start on port `8080`:
 
-# AI Dev Studio provides an integrated preview environment for applications and web projects.
+```bash
+npm run dev -- --port 8080
+```
 
-# 
+Build the application:
 
-# Developers can preview:
+```bash
+npm run build
+```
 
-# 
+Preview the production build:
 
-# \* HTML applications
+```bash
+npm run preview
+```
 
-# \* Frontend projects
+Run linting:
 
-# \* Development servers
+```bash
+npm run lint
+```
 
-# \* Local web applications
+---
 
-# \* Running project interfaces
+# 📦 Production Build
 
-# 
+Create a production build:
 
-# This creates a workflow where developers can:
+```bash
+npm run build
+```
 
-# 
+Preview the production build:
 
-# ```text
+```bash
+npm run preview
+```
 
-# Write Code
+Before deployment, verify:
 
-# &#x20;    ↓
+* AI configuration
+* Environment variables
+* API security
+* Build output
+* Browser compatibility
+* Dependency configuration
 
-# Run Application
+---
 
-# &#x20;    ↓
+# 🐛 Troubleshooting
 
-# Preview
+## `node` is not recognized
 
-# &#x20;    ↓
+Install Node.js 20 or newer and restart your terminal.
 
-# Test
+Verify:
 
-# &#x20;    ↓
+```bash
+node --version
+```
 
-# Fix with AI
+---
 
-# &#x20;    ↓
+## `npm` is not recognized
 
-# Repeat
+Reinstall Node.js and ensure npm is included in the installation.
 
-# ```
+Verify:
 
-# 
+```bash
+npm --version
+```
 
-# \---
+---
 
-# 
+## Dependencies are missing
 
-# \# 🔀 Source Control
+Run:
 
-# 
+```bash
+npm install
+```
 
-# AI Dev Studio includes a source-control workspace designed around Git development.
+Then:
 
-# 
+```bash
+npm run dev -- --port 8080
+```
 
-# The Source Control panel can provide:
+---
 
-# 
+## Port 8080 is already in use
 
-# \* Git changes
+Start the application on another port:
 
-# \* File diffs
+```bash
+npm run dev -- --port 8081
+```
 
-# \* Commit history
+Then open:
 
-# \* Modified files
+```text
+http://localhost:8081
+```
 
-# \* Code change inspection
+---
 
-# \* Git review assistance
+## AI Assistant Is Not Responding
 
-# 
+Check:
 
-# The integrated AI agent can also assist with Git-related code review tasks.
+* Groq API configuration
+* API key validity
+* Internet connection
+* Selected AI model
+* API usage limits
+* Application configuration
 
-# 
+Never expose your API key in publicly accessible frontend code.
 
-# \---
+---
 
-# 
+# 🔐 Security
 
-# \# 🧠 AI-Assisted Development Workflow
+AI Dev Studio is primarily intended as a local development environment.
 
-# 
+Because the application provides development-oriented functionality, take appropriate precautions when exposing it to a network.
 
-# AI Dev Studio is designed around a continuous development workflow.
+### Recommended Practices
 
-# 
+* 🔑 Never commit API keys
+* 🚫 Never commit `.env` files
+* 🌐 Do not publicly expose the development server without proper security controls
+* ⚠️ Avoid executing untrusted commands
+* 🤖 Review AI-generated code before execution
+* 🔀 Review Git changes before committing
+* 📦 Keep dependencies updated
+* 🔒 Avoid sending sensitive source code to external AI services without understanding the applicable privacy policies
 
-# ```text
+---
 
-# ┌─────────────────────┐
+# 🎯 Use Cases
 
-# │   File Explorer     │
+### 👨‍💻 Software Developers
 
-# └──────────┬──────────┘
+* Full-stack development
+* Rapid prototyping
+* Debugging
+* Refactoring
+* Code review
+* Documentation
 
-# &#x20;          ↓
+### 🎓 Students
 
-# ┌─────────────────────┐
+* Learning programming
+* Building academic projects
+* Understanding code
+* AI-assisted development
+* Application testing
+* Experimentation
 
-# │    Code Editor      │
+### 🚀 Startup & Product Teams
 
-# └──────────┬──────────┘
+* MVP development
+* Feature prototyping
+* Internal tools
+* AI-assisted development workflows
 
-# &#x20;          ↓
+### 🔬 Researchers
 
-# ┌─────────────────────┐
+* Experiment development
+* Data-processing scripts
+* Research prototypes
+* Technical experimentation
 
-# │    AI Coding Agent  │
+---
 
-# └──────────┬──────────┘
+# 🌟 Why AI Dev Studio?
 
-# &#x20;          ↓
+Traditional development often requires switching between multiple applications:
 
-# ┌─────────────────────┐
+```text
+File Explorer
+      ↓
+Code Editor
+      ↓
+Terminal
+      ↓
+Browser
+      ↓
+Git
+      ↓
+AI Assistant
+```
 
-# │ Virtual Terminal    │
+AI Dev Studio brings these workflows together:
 
-# └──────────┬──────────┘
+```text
+              AI DEV STUDIO
 
-# &#x20;          ↓
+       ┌─────────────────────────┐
+       │      File Explorer      │
+       ├────────────┬────────────┤
+       │            │            │
+       │    Code    │     AI     │
+       │   Editor   │    Agent   │
+       │            │            │
+       ├────────────┴────────────┤
+       │ Terminal │ Preview │ Git│
+       └─────────────────────────┘
+```
 
-# ┌─────────────────────┐
+The result is a unified environment for:
 
-# │    Live Preview     │
+**Writing → Understanding → Testing → Previewing → Reviewing → Managing Code**
 
-# └──────────┬──────────┘
+---
 
-# &#x20;          ↓
+# 🔮 Future Improvements
 
-# ┌─────────────────────┐
+Potential future improvements include:
 
-# │   Source Control    │
+* 🧠 Advanced agentic coding workflows
+* 🔍 Project-wide semantic code search
+* 📚 Retrieval-augmented code intelligence
+* 🗃️ Persistent workspace storage
+* 🌐 Remote development environments
+* 👥 Real-time collaborative coding
+* 🔐 Secure sandboxed command execution
+* 🐳 Docker-based development environments
+* ☁️ Cloud deployment
+* 🌎 GitHub integration
+* 🔀 Automated pull request assistance
+* 🧪 Automated test generation
+* 🛠️ AI-powered debugging
+* 📊 Project analytics
+* 🧩 Extension/plugin system
+* 🎙️ Voice-controlled coding
+* 📱 Progressive Web App support
+* ⚡ Streaming AI responses
+* 🖥️ Multi-workspace support
 
-# └─────────────────────┘
+---
 
-# ```
+# 📜 License
 
-# 
+This project is licensed under the **MIT License**.
 
-# The goal is to reduce the need to switch between multiple development applications.
+See the [`LICENSE`](LICENSE) file for more information.
 
-# 
+---
 
-# \---
+# 👨‍💻 Author
 
-# 
+**Sam Wilson**
 
-# \# 🏗️ Architecture
+B.E. Computer Science Engineering
+Artificial Intelligence & Machine Learning
 
-# 
+---
 
-# AI Dev Studio follows a modern web application architecture.
+# 🔗 Repository
 
-# 
+**AI Dev Studio**
 
-# ```text
+```text
+https://github.com/rsamwilson2323-cloud/AI-Dev-Studio
+```
 
-# &#x20;                   ┌─────────────────────┐
+---
 
-# &#x20;                   │      Browser        │
+# ⭐ Support the Project
 
-# &#x20;                   │    AI Dev Studio    │
+If you find **AI Dev Studio** useful:
 
-# &#x20;                   └──────────┬──────────┘
+* ⭐ Star the repository
+* 🍴 Fork the project
+* 🐛 Report bugs
+* 💡 Suggest new features
+* 🔧 Submit improvements
+* 📢 Share the project
 
-# &#x20;                              │
+---
 
-# &#x20;             ┌────────────────┼────────────────┐
-
-# &#x20;             ↓                ↓                ↓
-
-# &#x20;     ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-
-# &#x20;     │ File System  │ │ Code Editor  │ │ AI Assistant │
-
-# &#x20;     └──────────────┘ └──────────────┘ └──────┬───────┘
-
-# &#x20;                                               │
-
-# &#x20;                                               ↓
-
-# &#x20;                                      ┌────────────────┐
-
-# &#x20;                                      │   Groq API     │
-
-# &#x20;                                      │ Llama 3.3 70B  │
-
-# &#x20;                                      └────────────────┘
-
-# 
-
-# &#x20;             ┌────────────────┼────────────────┐
-
-# &#x20;             ↓                ↓                ↓
-
-# &#x20;      ┌────────────┐   ┌────────────┐   ┌────────────┐
-
-# &#x20;      │  Terminal  │   │  Preview   │   │    Git     │
-
-# &#x20;      └────────────┘   └────────────┘   └────────────┘
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# 🛠️ Tech Stack
-
-# 
-
-# | Technology              | Purpose                       |
-
-# | ----------------------- | ----------------------------- |
-
-# | \*\*React\*\*               | Frontend application          |
-
-# | \*\*TypeScript\*\*          | Type-safe development         |
-
-# | \*\*Vite\*\*                | Development and build tooling |
-
-# | \*\*Tailwind CSS\*\*        | UI styling                    |
-
-# | \*\*Groq API\*\*            | AI inference                  |
-
-# | \*\*Llama 3.3 70B\*\*       | AI coding model               |
-
-# | \*\*Node.js\*\*             | Runtime environment           |
-
-# | \*\*npm\*\*                 | Package management            |
-
-# | \*\*Bun\*\*                 | Alternative package manager   |
-
-# | \*\*Git\*\*                 | Source control                |
-
-# | \*\*Monaco-style Editor\*\* | Code editing experience       |
-
-# 
-
-# \---
-
-# 
-
-# \# 📂 Project Structure
-
-# 
-
-# ```text
-
-# AI Dev Studio/
-
-# │
-
-# ├── 📁 src/
-
-# │   ├── 📁 components/
-
-# │   ├── 📁 pages/
-
-# │   ├── 📁 hooks/
-
-# │   ├── 📁 lib/
-
-# │   └── 📄 main.tsx
-
-# │
-
-# ├── 📄 .gitignore
-
-# ├── 📄 .prettierignore
-
-# ├── 📄 .prettierrc
-
-# ├── 📄 LICENSE
-
-# ├── 📄 README.md
-
-# ├── 📄 bunfig.toml
-
-# ├── 📄 components.json
-
-# ├── 📄 eslint.config.js
-
-# ├── 📄 package.json
-
-# ├── 📄 package-lock.json
-
-# ├── 📄 run.bat
-
-# ├── 📄 run.sh
-
-# ├── 📄 tsconfig.json
-
-# └── 📄 vite.config.ts
-
-# ```
-
-# 
-
-# The primary application source code is contained inside the `src/` directory.
-
-# 
-
-# \---
-
-# 
-
-# \# 💻 Requirements
-
-# 
-
-# Before running AI Dev Studio, make sure you have:
-
-# 
-
-# \* Windows 10 / Windows 11, macOS, or Linux
-
-# \* Node.js 20+
-
-# \* npm
-
-# \* Internet connection
-
-# \* Groq API access for AI functionality
-
-# 
-
-# Check your installation:
-
-# 
-
-# ```bash
-
-# node --version
-
-# ```
-
-# 
-
-# ```bash
-
-# npm --version
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# 🚀 Installation
-
-# 
-
-# \## 1. Clone the Repository
-
-# 
-
-# ```bash
-
-# git clone https://github.com/rsamwilson2323-cloud/AI-Dev-Studio.git
-
-# ```
-
-# 
-
-# Move into the project directory:
-
-# 
-
-# ```bash
-
-# cd AI-Dev-Studio
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## 2. Install Dependencies
-
-# 
-
-# Using npm:
-
-# 
-
-# ```bash
-
-# npm install
-
-# ```
-
-# 
-
-# Or using Bun:
-
-# 
-
-# ```bash
-
-# bun install
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# ▶️ Running the Application
-
-# 
-
-# \## Windows — Recommended
-
-# 
-
-# AI Dev Studio includes a Windows launcher:
-
-# 
-
-# ```text
-
-# run.bat
-
-# ```
-
-# 
-
-# Double-click:
-
-# 
-
-# ```text
-
-# run.bat
-
-# ```
-
-# 
-
-# The launcher will:
-
-# 
-
-# 1\. Check whether Node.js is installed
-
-# 2\. Display the Node.js version
-
-# 3\. Check project dependencies
-
-# 4\. Install missing dependencies
-
-# 5\. Start the development server
-
-# 6\. Launch the application in your browser
-
-# 7\. Run the application on port `8080`
-
-# 
-
-# \---
-
-# 
-
-# \## Manual Start
-
-# 
-
-# You can also start the application manually:
-
-# 
-
-# ```bash
-
-# npm run dev -- --port 8080
-
-# ```
-
-# 
-
-# The application will be available at:
-
-# 
-
-# ```text
-
-# http://localhost:8080
-
-# ```
-
-# 
-
-# You can also access:
-
-# 
-
-# ```text
-
-# http://127.0.0.1:8080
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# ⚙️ Groq AI Configuration
-
-# 
-
-# AI Dev Studio uses the \*\*Groq API\*\* to power its AI coding assistant.
-
-# 
-
-# The configured model is:
-
-# 
-
-# ```text
-
-# llama-3.3-70b-versatile
-
-# ```
-
-# 
-
-# The AI assistant can perform tasks such as:
-
-# 
-
-# ```text
-
-# Explain
-
-# Fix
-
-# Refactor
-
-# Test
-
-# Review Git
-
-# Document
-
-# ```
-
-# 
-
-# \## 🔐 API Key Security
-
-# 
-
-# Never commit your personal Groq API key to GitHub.
-
-# 
-
-# Do not place real API credentials directly inside publicly accessible source code.
-
-# 
-
-# If environment variables are used, make sure the environment file is ignored by Git.
-
-# 
-
-# Example:
-
-# 
-
-# ```env
-
-# GROQ\_API\_KEY=your\_groq\_api\_key\_here
-
-# ```
-
-# 
-
-# Replace the placeholder with your own API key.
-
-# 
-
-# \---
-
-# 
-
-# \# 🧭 Application Modules
-
-# 
-
-# \## 🗂️ File Explorer
-
-# 
-
-# The File Explorer provides a structured view of the current workspace.
-
-# 
-
-# Users can:
-
-# 
-
-# \* Browse folders
-
-# \* Open files
-
-# \* Upload files
-
-# \* Upload folders
-
-# \* Navigate project structures
-
-# \* Access folder context menus
-
-# \* Open terminal locations
-
-# 
-
-# \---
-
-# 
-
-# \## 📝 Code Editor
-
-# 
-
-# The editor provides a multi-file coding environment.
-
-# 
-
-# Typical workflow:
-
-# 
-
-# ```text
-
-# Open File
-
-# &#x20;   ↓
-
-# Edit Code
-
-# &#x20;   ↓
-
-# Save
-
-# &#x20;   ↓
-
-# Ask AI
-
-# &#x20;   ↓
-
-# Test
-
-# &#x20;   ↓
-
-# Preview
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## 🤖 AI Assistant
-
-# 
-
-# The AI coding agent can assist developers with common programming tasks.
-
-# 
-
-# \### Explain
-
-# 
-
-# Understand unfamiliar code.
-
-# 
-
-# ```text
-
-# Explain this function.
-
-# ```
-
-# 
-
-# \### Fix
-
-# 
-
-# Identify and correct potential issues.
-
-# 
-
-# ```text
-
-# Fix the errors in this file.
-
-# ```
-
-# 
-
-# \### Refactor
-
-# 
-
-# Improve code structure and maintainability.
-
-# 
-
-# ```text
-
-# Refactor this component.
-
-# ```
-
-# 
-
-# \### Test
-
-# 
-
-# Generate or suggest tests.
-
-# 
-
-# ```text
-
-# Create tests for this function.
-
-# ```
-
-# 
-
-# \### Review Git
-
-# 
-
-# Analyze changes before committing.
-
-# 
-
-# ```text
-
-# Review my current Git changes.
-
-# ```
-
-# 
-
-# \### Document
-
-# 
-
-# Generate useful documentation.
-
-# 
-
-# ```text
-
-# Document this function.
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# 💻 Terminal
-
-# 
-
-# The integrated terminal supports common development commands.
-
-# 
-
-# Examples:
-
-# 
-
-# ```bash
-
-# npm install
-
-# ```
-
-# 
-
-# ```bash
-
-# npm run dev
-
-# ```
-
-# 
-
-# ```bash
-
-# npm run build
-
-# ```
-
-# 
-
-# ```bash
-
-# npm test
-
-# ```
-
-# 
-
-# ```bash
-
-# python app.py
-
-# ```
-
-# 
-
-# ```bash
-
-# node server.js
-
-# ```
-
-# 
-
-# Windows batch scripts can also be executed:
-
-# 
-
-# ```text
-
-# run.bat
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# 🌐 Local Network Access
-
-# 
-
-# The development server can be exposed to devices connected to the same local network.
-
-# 
-
-# Run:
-
-# 
-
-# ```bash
-
-# npm run dev -- --host 0.0.0.0 --port 8080
-
-# ```
-
-# 
-
-# Then access the application using your computer's local IP address:
-
-# 
-
-# ```text
-
-# http://YOUR\_LOCAL\_IP:8080
-
-# ```
-
-# 
-
-# Example:
-
-# 
-
-# ```text
-
-# http://192.168.1.10:8080
-
-# ```
-
-# 
-
-# Make sure Windows Firewall or your operating system firewall allows port `8080` if another device cannot connect.
-
-# 
-
-# \---
-
-# 
-
-# \# 🧪 Development
-
-# 
-
-# Start the development server:
-
-# 
-
-# ```bash
-
-# npm run dev
-
-# ```
-
-# 
-
-# Start on port `8080`:
-
-# 
-
-# ```bash
-
-# npm run dev -- --port 8080
-
-# ```
-
-# 
-
-# Build the application:
-
-# 
-
-# ```bash
-
-# npm run build
-
-# ```
-
-# 
-
-# Preview the production build:
-
-# 
-
-# ```bash
-
-# npm run preview
-
-# ```
-
-# 
-
-# Run linting:
-
-# 
-
-# ```bash
-
-# npm run lint
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# 📦 Production Build
-
-# 
-
-# Create a production build:
-
-# 
-
-# ```bash
-
-# npm run build
-
-# ```
-
-# 
-
-# Then preview the generated application:
-
-# 
-
-# ```bash
-
-# npm run preview
-
-# ```
-
-# 
-
-# Before deployment, verify:
-
-# 
-
-# \* AI configuration
-
-# \* Environment variables
-
-# \* API security
-
-# \* Build output
-
-# \* Browser compatibility
-
-# 
-
-# \---
-
-# 
-
-# \# 🐛 Troubleshooting
-
-# 
-
-# \## `node` is not recognized
-
-# 
-
-# Install Node.js 20 or newer and restart your terminal.
-
-# 
-
-# Verify:
-
-# 
-
-# ```bash
-
-# node --version
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## `npm` is not recognized
-
-# 
-
-# Reinstall Node.js and make sure npm is included in the installation.
-
-# 
-
-# Verify:
-
-# 
-
-# ```bash
-
-# npm --version
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## Dependencies are missing
-
-# 
-
-# Run:
-
-# 
-
-# ```bash
-
-# npm install
-
-# ```
-
-# 
-
-# Then:
-
-# 
-
-# ```bash
-
-# npm run dev -- --port 8080
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## Port 8080 is already in use
-
-# 
-
-# Start the application on another port:
-
-# 
-
-# ```bash
-
-# npm run dev -- --port 8081
-
-# ```
-
-# 
-
-# Then open:
-
-# 
-
-# ```text
-
-# http://localhost:8081
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## AI assistant is not responding
-
-# 
-
-# Check:
-
-# 
-
-# \* Groq API configuration
-
-# \* API key validity
-
-# \* Internet connection
-
-# \* Selected AI model
-
-# \* API usage limits
-
-# \* Application configuration
-
-# 
-
-# Never expose your API key in publicly accessible frontend code.
-
-# 
-
-# \---
-
-# 
-
-# \# 🔐 Security
-
-# 
-
-# AI Dev Studio is intended primarily as a local development environment.
-
-# 
-
-# Because the application provides development-oriented functionality, users should take care when exposing it to a network.
-
-# 
-
-# \### Recommended Security Practices
-
-# 
-
-# \* Never commit API keys.
-
-# \* Never commit `.env` files.
-
-# \* Do not expose the development server publicly without proper security controls.
-
-# \* Avoid executing untrusted commands.
-
-# \* Review AI-generated code before execution.
-
-# \* Review Git changes before committing.
-
-# \* Keep dependencies updated.
-
-# \* Avoid uploading sensitive source code to external AI services without understanding the applicable privacy policies.
-
-# 
-
-# \---
-
-# 
-
-# \# 🎯 Use Cases
-
-# 
-
-# AI Dev Studio can be useful for:
-
-# 
-
-# \### 👨‍💻 Software Developers
-
-# 
-
-# \* Full-stack development
-
-# \* Rapid prototyping
-
-# \* Debugging
-
-# \* Refactoring
-
-# \* Code review
-
-# \* Documentation
-
-# 
-
-# \### 🎓 Students
-
-# 
-
-# \* Learning programming
-
-# \* Building academic projects
-
-# \* Understanding code
-
-# \* Experimenting with AI-assisted development
-
-# \* Testing applications
-
-# 
-
-# \### 🚀 Startup \& Product Teams
-
-# 
-
-# \* Rapid MVP development
-
-# \* Feature prototyping
-
-# \* Internal tools
-
-# \* AI-assisted development workflows
-
-# 
-
-# \### 🔬 Researchers
-
-# 
-
-# \* Experiment development
-
-# \* Data-processing scripts
-
-# \* Research prototypes
-
-# \* Technical experimentation
-
-# 
-
-# \---
-
-# 
-
-# \# 🌟 Why AI Dev Studio?
-
-# 
-
-# Traditional development often requires switching between multiple tools:
-
-# 
-
-# ```text
-
-# File Explorer
-
-# &#x20;     ↓
-
-# Code Editor
-
-# &#x20;     ↓
-
-# Terminal
-
-# &#x20;     ↓
-
-# Browser
-
-# &#x20;     ↓
-
-# Git
-
-# &#x20;     ↓
-
-# AI Assistant
-
-# ```
-
-# 
-
-# AI Dev Studio attempts to bring these workflows together:
-
-# 
-
-# ```text
-
-# &#x20;             AI DEV STUDIO
-
-# 
-
-# &#x20;       ┌───────────────────────┐
-
-# &#x20;       │     File Explorer     │
-
-# &#x20;       ├───────────┬───────────┤
-
-# &#x20;       │           │           │
-
-# &#x20;       │   Code    │    AI     │
-
-# &#x20;       │  Editor   │  Agent    │
-
-# &#x20;       │           │           │
-
-# &#x20;       ├───────────┴───────────┤
-
-# &#x20;       │ Terminal │ Preview │ Git
-
-# &#x20;       └───────────────────────┘
-
-# ```
-
-# 
-
-# The result is a unified environment for \*\*writing, understanding, testing, previewing, and managing code\*\*.
-
-# 
-
-# \---
-
-# 
-
-# \# 🔮 Future Improvements
-
-# 
-
-# Potential future improvements include:
-
-# 
-
-# \* 🧠 Advanced agentic coding workflows
-
-# \* 🔍 Project-wide semantic code search
-
-# \* 📚 Retrieval-augmented code intelligence
-
-# \* 🗃️ Persistent workspace storage
-
-# \* 🌐 Remote development environments
-
-# \* 👥 Real-time collaborative coding
-
-# \* 🔐 Secure sandboxed command execution
-
-# \* 🐳 Docker-based development environments
-
-# \* 🌎 Cloud deployment
-
-# \* ☁️ GitHub integration
-
-# \* 🔀 Automated pull request assistance
-
-# \* 🧪 Automated test generation
-
-# \* 🛠️ AI-powered debugging
-
-# \* 📊 Project analytics
-
-# \* 🧩 Extension/plugin system
-
-# \* 🎙️ Voice-controlled coding
-
-# \* 📱 Progressive Web App support
-
-# \* ⚡ Streaming AI responses
-
-# \* 🖥️ Multi-workspace support
-
-# 
-
-# \---
-
-# 
-
-# \# 📜 License
-
-# 
-
-# This project is licensed under the \*\*MIT License\*\*.
-
-# 
-
-# See the `LICENSE` file for more information.
-
-# 
-
-# \---
-
-# 
-
-# \# 👨‍💻 Author
-
-# 
-
-# \*\*Sam Wilson\*\*
-
-# 
-
-# B.E. Computer Science Engineering
-
-# Artificial Intelligence \& Machine Learning
-
-# 
-
-# \---
-
-# 
-
-# \# 🔗 Repository
-
-# 
-
-# \*\*AI Dev Studio\*\*
-
-# 
-
-# ```text
-
-# https://github.com/rsamwilson2323-cloud/AI-Dev-Studio
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# ⭐ Support the Project
-
-# 
-
-# If you find \*\*AI Dev Studio\*\* useful:
-
-# 
-
-# \* ⭐ Star the repository
-
-# \* 🍴 Fork the project
-
-# \* 🐛 Report bugs
-
-# \* 💡 Suggest new features
-
-# \* 🔧 Submit improvements
-
-# \* 📢 Share the project
-
-# 
-
-# \---
+<p align="center">
+  Built with ❤️ for AI-assisted software development.
+</p>
